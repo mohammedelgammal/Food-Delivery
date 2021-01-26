@@ -1,0 +1,387 @@
+// variables 
+$dark-color: #1d1d1d;
+$bright-color: #746B61;
+$pink-color: #04C1B7;
+$blue-color: #6B6BF1;
+$green-color: #D99D91;
+$red-color: rgb(240, 60, 60);
+$brighter-red: rgb(255, 90, 90);
+$red-gradient: linear-gradient(to left, $red-color, $brighter-red);
+$transparent-white: rgba(256,256,256,0.1);
+
+@mixin centering {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+@mixin number {
+    position: absolute;
+    background-color: $red-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    left: 60%;
+    bottom: 60%;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+@mixin fontstyle {
+    font-size: 20px;
+    color: white;
+}
+@mixin dropdown{
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    left: -180px;
+    background-color: #111;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s ease-in;
+    transform: translateY(5px);
+    visibility: hidden;
+    opacity: 0;
+}
+@mixin buttonstyle {
+    @include fontstyle;
+    width: 90px;
+    height: 50px;
+    border-radius: 30px;
+    background-image: $red-gradient;
+    border: none;
+    outline: none;
+    font-weight: semi-bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-image 0.5s ease;
+}
+@mixin dropdown-effect {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+//begening of style
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: $red-gradient;
+}
+
+
+body {
+    background-color: $dark-color;
+    height: 150vh;
+}
+
+header {
+    @include centering;
+
+        //logo
+        .logo {
+            @include centering;
+            flex: 1;
+            justify-content: flex-start;
+            
+                img {
+                    position: relative;
+                    left: 30%;
+                    cursor: pointer;
+                }
+        }
+
+        //navigation bar
+        nav {
+            @include centering;
+            flex: 2;
+            justify-content: space-evenly;
+            
+                ul {
+                    @include centering;
+                    list-style-type: none;
+                    
+                    
+                        li {
+                            @include fontstyle;
+                            color: white;
+                            margin-right: 40px;
+                            position: relative;
+                            display: block;
+                            padding-bottom: 8px;
+                            
+                        }
+
+                        li::after {
+                            content: "";
+                            @include fontstyle;
+                            position: absolute;
+                            background-color: red;
+                            top: 100%;
+                            left: 0px;
+                            width: 100%;
+                            height: 2px;
+                            transition: all 0.5s ease; 
+                            transform: scaleX(0);
+                            transform-origin: left;
+                        }
+                        
+                        li:hover {
+                            cursor: pointer;
+                        }
+
+                        li:hover::after {
+                            transform: scaleX(1);
+                            cursor: pointer;
+                        }
+                }
+        }
+
+        //checkout
+        .checkout {
+            @include centering;
+            flex: 1;
+            justify-content: flex-end;
+            position: relative;
+
+                .shopping-bag, .user-login {
+                    @include centering;
+                    position: relative;
+                    right: 30%;
+                    margin: 0px 5px;
+                    cursor: pointer;                        
+                }
+
+                .shopping-bag {
+                    width: 50px;
+                    height: 50px;
+
+                        svg {
+                            position: absolute;
+                        }
+
+                        .number {
+                            @include centering;
+                            @include number;
+                        }
+
+                        .user-bag-submenu {
+                            @include centering;
+                            @include dropdown;
+                            top: 65px;
+                            left: -270px;
+                            height: 500px;
+                            width: 400px;
+                            padding: 40px 30px;
+                            cursor: default;
+
+                                .cart-items {
+                                    @include centering;
+                                    justify-content: flex-start;
+                                    color: white;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    flex: 4;
+                                    border-bottom: 2px solid white;
+                                    overflow: auto;
+
+                                    .item {
+                                        @include centering;
+                                        justify-content: flex-start;
+                                        width: 100%;
+                                        height: 100px;
+                                        position: relative;
+                                        margin: 20px 0px;
+                                        
+                                            img {
+                                                width: 100px;
+                                                height: 100%;
+                                                margin-right: 20px;
+                                            }
+
+                                            .info {
+                                                @include centering;
+                                                flex-direction: column;
+                                                width: 100%;
+                                                height: 100%;
+
+                                                    .title {
+                                                        @include centering;
+                                                        justify-content: flex-start;
+                                                        width: 100%;
+                                                        font-size: 18px;
+                                                        font-weight: semi-bold;
+                                                        height: 30%;
+                                                    }
+
+                                                    .newoldprice {
+                                                        @include centering;
+                                                        justify-content: flex-start;
+                                                        width: 100%;
+                                                        height: 30%;
+                                                        font-size: 16px;
+                                                        font-weight: 300;
+
+                                                            .oldprice {
+                                                                font-size: 14px;
+                                                                text-decoration: line-through;
+                                                                margin-left: 20px;
+                                                                color: $bright-color;
+                                                            }
+                                                    }
+
+                                                    .count-remove {
+                                                        @include centering;
+                                                        width: 100%;
+                                                        height: 40%;
+
+                                                            .count {
+                                                                @include centering;
+                                                                height: 100%;
+                                                                width: 80%;
+                                                                justify-content: flex-start;
+                                                                
+
+                                                                    .increase, .decrease {
+                                                                        @include buttonstyle;
+                                                                        width: 40px;
+                                                                        height: 40px;
+                                                                        background-image: none;
+                                                                        background-color: transparent;
+                                                                        cursor: pointer;
+                                                                    }
+
+                                                                    .countnumber {
+                                                                        @include centering;
+                                                                        width: 25px;
+                                                                        height: 25px;
+                                                                        border: 1px white solid;
+                                                                        margin-right: 10px;
+                                                                        margin-left: 10px;
+                                                                        border-radius: 5px; 
+                                                                    }
+                                                            }
+
+                                                            .trash {
+                                                                @include centering;
+                                                                justify-content: flex-start;
+                                                                position: relative;
+                                                                height: 100%;
+                                                                width: 20%;
+                                                                cursor: pointer;
+                                                            }
+                                                    }
+                                            }
+                                    }
+
+                                    .item:hover {
+                                        background-color: $transparent-white;
+                                    }
+
+                                    .item::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 0%;
+                                        background-color: $transparent-white;
+                                        height: 3px;
+                                        width: 100%;
+                                        margin: 20px 0px;
+                                    }
+                                        
+                                }
+
+                                .cart-items::-webkit-scrollbar {
+                                    width: 5px;
+                                }
+
+                                .cart-items::-webkit-scrollbar-thumb {
+                                    background-image: $red-gradient;
+                                }
+
+                                .cart-items::-webkit-scrollbar-track {
+                                    background-color: $transparent-white;
+                                }
+
+                                .checkout-price {
+                                    @include centering;
+                                    @include fontstyle;
+                                    flex: 2;
+                                    width: 100%;
+                                    font-size: 40px;
+                                }
+
+                                .checkout-button {
+                                    @include buttonstyle;
+                                    width: 85%;
+                                    flex: 1;
+                                    transition: all ease 0.5s;
+                                }
+
+                                .checkout-button:hover {
+                                    background-image: linear-gradient(to right, $red-color, $brighter-red);
+                                }
+                        }
+                }
+                
+                .shopping-bag:hover > .user-bag-submenu {
+                    @include dropdown-effect;
+                }
+
+                .user-login {
+
+                    .user-login-submenu {
+                        @include centering;
+                        @include dropdown;
+    
+                            .item {
+                                @include centering;
+                                width: 100%;
+                                border-bottom: 0.1px rgba(255, 255, 255, 0.1) solid;
+                                padding-left: 20px;
+    
+                                    svg {
+                                        flex: 1;
+                                    }    
+    
+                                    a {
+                                        @include fontstyle;
+                                        font-size: 18px;
+                                        font-weight: 100;
+                                        text-align: left;
+                                        flex: 4;
+                                        text-decoration: none;
+                                    }
+                            }
+    
+                            .item:hover {
+                                cursor: pointer;
+                                background-image: linear-gradient(to left, $red-color, $brighter-red);
+                            }
+    
+                            .logout-item {
+                                border: 0;
+                            }
+                    }
+
+                    .chevron {
+                        position: relative;
+                        top: 5px;
+                    }
+                }
+
+                .user-login:hover > .user-login-submenu {
+                    @include dropdown-effect;
+                }
+        }
+}
