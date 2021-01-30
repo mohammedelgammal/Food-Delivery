@@ -382,6 +382,12 @@ header {
 
                 .user-login:hover > .user-login-submenu {
                     @include dropdown-effect;
+                    z-index: 3;
                 }
         }
+}
+
+main {
+    @include centering;
+    width: 100vh;
 }

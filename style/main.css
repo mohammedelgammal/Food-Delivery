@@ -612,5 +612,20 @@ header .checkout .user-login:hover > .user-login-submenu {
   opacity: 1;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+  z-index: 3;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
