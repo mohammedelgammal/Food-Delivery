@@ -72,7 +72,7 @@ $transparent-white: rgba(256,256,256,0.1);
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -82,11 +82,27 @@ $transparent-white: rgba(256,256,256,0.1);
 
 body {
     background-color: $dark-color;
-    height: 150vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.scroll-top {
+    @include centering;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 90%;
+    left: 90%;
+    border-radius: 50%;
+    background: $red-gradient;
+    cursor: pointer;
 }
 
 header {
     @include centering;
+    height: 15vh;
+    width: 100vw;
+    z-index: 2;
 
         //logo
         .logo {
@@ -389,5 +405,115 @@ header {
 
 main {
     @include centering;
-    width: 100vh;
+    flex-direction: column;
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+
+        img, h1, p {
+            pointer-events: none;
+        }
+
+        .images, .social-icons {
+            position: absolute;
+        }
+
+        .mid-ri-img {
+            position: absolute;
+            left: 75%;
+        }
+
+        .up-le-img {
+            top: 5%;
+            left: -2%;
+        }
+
+        .lo-le-img {
+            top: 50%;
+            left: 0;
+
+                img {
+                    width: 70%;
+                    height: 70%;
+                }
+        }
+
+        .social-icons {
+            @include centering;
+            flex-direction: column;
+            justify-content: space-evenly;
+            top: 25%;
+            left: 4%;
+            height: 35%;
+            
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+        }
+
+        .main-text {
+            @include centering;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 50%;
+            width: 50%;
+
+                h1, p {
+                    text-align: center;
+                    color: gray;
+                    font-size: 18px;
+                }
+
+                h1 {
+                    font-size: 5rem;
+                    color: white;
+                    font-family: 'Clicker Script', cursive;
+                }
+                
+                .p-two {
+                    font-size: 14px;
+                }
+        }
+
+        .search {
+            @include centering;
+            position: relative;
+            width: 70%;
+            height: 80px;
+            margin-top: 80px;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    padding-left: 7%;
+                    border-radius: 50px;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    background-color: $transparent-white;
+                    color: gray;
+                }
+
+                button, .location-pin {
+                    position: absolute;
+                }
+
+                button {
+                    @include buttonstyle;
+                    @include fontstyle;
+                    width: 25%;
+                    height: 80%;
+                    left: 74%;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+
+                .location-pin {
+                    left: 20px;
+                }
+        }
 }

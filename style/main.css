@@ -6,7 +6,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -16,7 +16,30 @@
 
 body {
   background-color: #1d1d1d;
-  height: 150vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.scroll-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  top: 90%;
+  left: 90%;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to left, #f03c3c, #ff5a5a);
+  cursor: pointer;
 }
 
 header {
@@ -30,6 +53,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
+  height: 15vh;
+  width: 100vw;
+  z-index: 2;
 }
 
 header .logo {
@@ -626,6 +652,170 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
-  width: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  height: 85vh;
+  width: 100vw;
+}
+
+main img, main h1, main p {
+  pointer-events: none;
+}
+
+main .images, main .social-icons {
+  position: absolute;
+}
+
+main .mid-ri-img {
+  position: absolute;
+  left: 75%;
+}
+
+main .up-le-img {
+  top: 5%;
+  left: -2%;
+}
+
+main .lo-le-img {
+  top: 50%;
+  left: 0;
+}
+
+main .lo-le-img img {
+  width: 70%;
+  height: 70%;
+}
+
+main .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  top: 25%;
+  left: 4%;
+  height: 35%;
+}
+
+main .social-icons svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+main .main-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50%;
+  width: 50%;
+}
+
+main .main-text h1, main .main-text p {
+  text-align: center;
+  color: gray;
+  font-size: 18px;
+}
+
+main .main-text h1 {
+  font-size: 5rem;
+  color: white;
+  font-family: 'Clicker Script', cursive;
+}
+
+main .main-text .p-two {
+  font-size: 14px;
+}
+
+main .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  position: relative;
+  width: 70%;
+  height: 80px;
+  margin-top: 80px;
+}
+
+main .search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 7%;
+  border-radius: 50px;
+  font-size: 18px;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: gray;
+}
+
+main .search button, main .search .location-pin {
+  position: absolute;
+}
+
+main .search button {
+  font-size: 20px;
+  color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background-image: linear-gradient(to left, #f03c3c, #ff5a5a);
+  border: none;
+  outline: none;
+  font-weight: semi-bold;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  font-size: 20px;
+  color: white;
+  width: 25%;
+  height: 80%;
+  left: 74%;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+main .search .location-pin {
+  left: 20px;
 }
 /*# sourceMappingURL=main.css.map */
