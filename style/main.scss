@@ -748,3 +748,97 @@ main {
                 }
         }
 }
+
+.about-us {
+    height: 100vh;
+    width: 100vw;
+
+        .info-about-us {
+            @include centering;
+            height: 50%;
+            width: 100%;
+
+                .left-hand-content {
+                    @include centering;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 50%;
+                    padding-left: 50px;
+
+                        p {
+                            color: darkred;
+                            font-size: 1.3rem;
+                            margin-bottom: 2rem;
+                        }
+
+                        h2 {
+                            font-family: 'Grand Hotel Regular', cursive;
+                            font-weight: 100;
+                            font-size: 4.5rem;
+                            line-height: 4rem;
+                            color: white;
+                        }
+                }
+
+                .right-hand-content {
+                    @include centering;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 50%;
+
+                        p {
+                            color: gray;
+                            margin-bottom: 20px;
+                        }
+                }
+        }
+
+        .our-values {
+            @include centering;
+            justify-content: space-evenly;
+            height: 50%;
+            width: 100%;
+
+                .value {
+                    @include centering;
+                    flex-direction: column;
+
+                        .icon {
+                            svg {
+                                width: 100px;
+                                height: 100px;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.3rem;
+                            color: white;
+                            font-weight: 100;
+                            text-align: center; 
+                        }
+                }
+        }
+}
+
+footer {
+    @include centering;
+    flex-direction: column;
+    width: 100vw;
+    height: 200px;
+    background-color: #111;
+
+        .social-icons {
+            @include centering;
+            justify-content: space-evenly;
+            width: 20%;
+        }
+        
+        p {
+            font-size: 15px;
+            color: white;
+            font-weight: 100;
+        }
+}
