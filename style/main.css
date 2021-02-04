@@ -1018,4 +1018,111 @@ main .search .location-pin {
   width: 500px;
   font-weight: 500;
 }
+
+.reviews {
+  position: relative;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 500px;
+  width: 100vw;
+  background-image: url(../imgs/fruit.jpg);
+  background-attachment: fixed;
+}
+
+.reviews .darker {
+  position: absolute;
+  background-color: #202020;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.reviews .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 100vw;
+  height: 200px;
+  z-index: 1;
+}
+
+.reviews .slider .client {
+  text-align: center;
+  margin: 20px;
+}
+
+.reviews .slider .client img {
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.reviews .slider .client .client-name {
+  color: darkred;
+  font-size: 1.5rem;
+}
+
+.reviews .slider .client .client-city {
+  font-weight: 100;
+}
+
+.reviews .paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  position: relative;
+  height: 100px;
+  width: 60%;
+  z-index: 1;
+}
+
+.reviews .paragraphs p {
+  position: absolute;
+  text-align: center;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.reviews .slider-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  height: 50px;
+  z-index: 1;
+}
 /*# sourceMappingURL=main.css.map */
