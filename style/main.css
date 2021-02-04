@@ -818,4 +818,204 @@ main .search button {
 main .search .location-pin {
   left: 20px;
 }
+
+.browse-food .basic-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 100vw;
+  height: 300px;
+}
+
+.browse-food .basic-info .left-hand-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 5rem;
+  width: 50%;
+  height: 100%;
+}
+
+.browse-food .basic-info .left-hand-text p {
+  color: darkred;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.browse-food .basic-info .left-hand-text h2 {
+  font-family: 'Grand Hotel Regular', cursive;
+  font-weight: 100;
+  font-size: 4.5rem;
+  line-height: 4rem;
+  color: white;
+}
+
+.browse-food .basic-info .info-about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 50%;
+  height: 100%;
+}
+
+.browse-food .basic-info .info-about-us .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: gray;
+}
+
+.browse-food .basic-info .info-about-us .info svg {
+  width: 50px;
+  height: 50px;
+  fill: darkred;
+}
+
+.browse-food .basic-info .info-about-us .info .number {
+  font-size: 1.5rem;
+}
+
+.browse-food .basic-info .info-about-us .info .text {
+  font-size: 1rem;
+}
+
+.browse-food .food-options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 347px 347px 347px;
+      grid-template-columns: 347px 347px 347px;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.browse-food .food-options .option {
+  position: relative;
+}
+
+.browse-food .food-options .option .time-tag {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  left: 83%;
+  border-radius: 0px 0px 50% 50%;
+  text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to left, #f03c3c, #ff5a5a);
+  color: white;
+  padding: 10px;
+  font-weight: 200;
+}
+
+.browse-food .food-options .option .upper-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20px;
+  padding: 20px 20px;
+  color: white;
+}
+
+.browse-food .food-options .option .upper-content svg {
+  fill: yellow;
+}
+
+.browse-food .food-options .option .upper-content .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.browse-food .food-options .option p {
+  padding: 0px 20px;
+  color: white;
+}
+
+.browse-food .browse-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+}
+
+.browse-food .browse-more button {
+  font-size: 20px;
+  color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background-image: linear-gradient(to left, #f03c3c, #ff5a5a);
+  border: none;
+  outline: none;
+  font-weight: semi-bold;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  width: 500px;
+  font-weight: 500;
+}
 /*# sourceMappingURL=main.css.map */
