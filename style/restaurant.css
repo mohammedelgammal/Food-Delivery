@@ -257,6 +257,7 @@ header .checkout .shopping-bag .user-bag-submenu {
   width: 400px;
   padding: 40px 30px;
   cursor: default;
+  z-index: 3;
 }
 
 header .checkout .shopping-bag .user-bag-submenu .cart-items {
@@ -1179,6 +1180,16 @@ main .search .location-pin {
   font-size: 4.5rem;
   line-height: 4rem;
   color: white;
+}
+
+.download-app .text-content img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.download-app .text-content img:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .download-app .stores {

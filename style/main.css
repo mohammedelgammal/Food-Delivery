@@ -20,6 +20,69 @@ body {
   overflow-x: hidden;
 }
 
+.loader-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  position: absolute;
+  background-color: #222;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  z-index: 4;
+}
+
+.loader-container .loader {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.loader-container .circle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.loader-container .border-circle-one {
+  top: 50px;
+  border: 2px solid white;
+}
+
+.loader-container .border-circle-two {
+  top: 50px;
+  left: 50px;
+  border: 2px solid white;
+}
+
+.loader-container .border-circle-three {
+  left: 25px;
+  border: 2px solid white;
+}
+
+.loader-container .red-circle {
+  position: absolute;
+  left: 25px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background-image: linear-gradient(to left, #f03c3c, #ff5a5a);
+}
+
+.fadeout {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .scroll-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,6 +320,7 @@ header .checkout .shopping-bag .user-bag-submenu {
   width: 400px;
   padding: 40px 30px;
   cursor: default;
+  z-index: 3;
 }
 
 header .checkout .shopping-bag .user-bag-submenu .cart-items {
@@ -1202,6 +1266,14 @@ main .search .location-pin {
   height: 200px;
   width: 200px;
   margin: 70px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.download-app .stores img:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .about-us {

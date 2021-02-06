@@ -86,6 +86,57 @@ body {
     overflow-x: hidden;
 }
 
+.loader-container {
+    @include centering;
+    position: absolute;
+    background-color: #222;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.2s ease;
+    z-index: 4;
+
+        .loader {
+            position: relative;
+            width: 85px;
+            height: 85px;
+            transition: opacity 0.5s ease;
+        }
+
+        .circle {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+
+        .border-circle-one {
+            top: 50px;
+            border: 2px solid white;
+        }
+          
+        .border-circle-two {
+            top: 50px;
+            left: 50px;
+            border: 2px solid white;
+        }
+          
+        .border-circle-three {
+            left: 25px;
+            border: 2px solid white;
+        }
+          
+        .red-circle {
+            position: absolute;
+            left: 25px;
+            background-image: $red-gradient;
+        }
+}
+
+.fadeout {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .scroll-top {
     @include centering;
     position: fixed;
@@ -200,6 +251,7 @@ header {
                             width: 400px;
                             padding: 40px 30px;
                             cursor: default;
+                            z-index: 3;
 
                                 .cart-items {
                                     @include centering;
@@ -745,6 +797,12 @@ main {
                     height: 200px;
                     width: 200px;
                     margin: 70px;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                }
+
+                img:hover {
+                    transform: translateY(-20px)
                 }
         }
 }
