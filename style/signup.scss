@@ -1,0 +1,169 @@
+@import '../style/main.scss';
+@function halfwidth($width){
+    $width: $width/2,
+    $return $width
+}
+
+
+body {
+    @include centering;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    @include centering;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+
+        .logo {
+            @include centering;
+            justify-content: flex-start;
+            height: 15%;
+            width: 70%;
+        }
+
+        .text-content {
+            @include centering;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20%;
+            width: 70%;
+            text-align: left;
+
+                p {
+                    font-weight: 100;
+                    font-size: 1.3rem;
+                    width: 100%;
+                    color: darkred;                    
+                }
+
+                h2 {
+                    width: 100%;
+                    font-family: sans-serif;
+                    font-weight: 100;
+                    font-size: 2rem;
+                    color: white;
+                    line-height: 2.8rem;
+                }
+
+                h3 {
+                    font-size: 1.1rem;
+                    color: gray;
+                    font-weight: 100;
+                }
+        }
+
+        .form {
+            @include centering;
+            height: 45%;
+            width: 74%;
+
+                form {
+                    @include centering;
+                    flex-direction: column;
+                    width: 100%;
+
+                        .nameno {
+                            @include centering;
+                            width: 100%;
+
+                                #fullname {
+                                    flex: 1;
+                                }
+
+                                #phoneno {
+                                    flex: 1;
+                                }
+                        }
+
+                        .email {
+                            @include centering;
+                            width: 100%;
+
+                                #email {
+                                    width: 100%;
+                                }
+                        }
+
+                        .password {
+                            @include centering;
+                            width: 100%;
+
+                                #password {
+                                    width: 100%;
+                                }
+                        }
+
+                        .subreg {
+                            @include centering;
+                            width: 100%;
+                            margin-top: 20px;
+
+                                #submit {
+                                    @include buttonstyle;
+                                    flex: 1;
+                                    padding: 0px;
+                                    font-size: 1rem;
+                                }
+
+                                a {
+                                    @include fontstyle;
+                                    flex: 2;
+                                    text-align: center;
+                                    font-size: 1rem;
+                                    text-decoration: none;
+                                    color: gray;
+                                    font-weight: bold; 
+                                }
+
+                                a:hover {
+                                    color: darkgoldenrod;
+                                }
+                        }
+
+                        input {
+                            width: 100px;
+                            height: 50px;
+                            border-radius: 5px;
+                            margin: 10px;
+                            padding-left: 15px;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            background-color: $transparent-white;
+                            font-size: 0.9rem;
+                        }
+
+                        ::placeholder {
+                            color: white;
+                        }
+                }
+        }
+
+        .external-links {
+            @include centering;
+            height: 20%;
+            width: 100%;
+            background-color: #333;
+
+                a {
+                    padding: 30px;
+                    color: gray;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }
+        }
+}
+
+.image {
+    height: 100%;
+    width: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+}
+
