@@ -469,7 +469,8 @@ main {
                 h1 {
                     font-size: 5rem;
                     color: white;
-                    font-family: 'Clicker Script', cursive;
+                    font-family: 'Grand Hotel Regular', cursive;
+                    font-weight: 100;
                 }
                 
                 .p-two {
@@ -519,7 +520,6 @@ main {
 }
 
 .browse-food {
-
 
         .basic-info {
             @include centering;

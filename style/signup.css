@@ -749,7 +749,8 @@ main .main-text h1, main .main-text p {
 main .main-text h1 {
   font-size: 5rem;
   color: white;
-  font-family: 'Clicker Script', cursive;
+  font-family: 'Grand Hotel Regular', cursive;
+  font-weight: 100;
 }
 
 main .main-text .p-two {

@@ -1,0 +1,150 @@
+@import '../style/main.scss';
+@mixin selectstyle {
+    width: 80%;
+    background-color: #111;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;                
+}
+
+main {
+    height: 40vw;
+
+        .mid-ri-img {
+            top: 5%;
+            left: 85%;
+
+            img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .up-le-img {
+            top: 40%;
+            left: -7%;
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+        }
+
+        .main-text {
+            height: 50px;
+
+            h1 {
+                background: $red-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .navigator {
+            @include centering;
+            justify-content: space-evenly;
+            width: 200px;
+
+                a, span {
+                    color: gray;
+                    font-size: 1rem;
+                    text-decoration: none;
+                }
+                
+        }
+}
+
+.filters {
+    @include centering;
+    height: 200px;
+    width: 100vw;
+    background: #111;
+
+        div {
+            margin: 0px 13px;
+        }
+
+        select, input {
+            cursor: pointer;
+        }
+
+        .price-slider {
+            @include centering;
+            flex-direction: column;
+            width: 20%;
+            height: 100%;
+
+                .label-text {
+                    @include centering;
+                    flex-direction: column;
+                    width: 100%;
+
+                        label {
+                            
+                            color: white;
+                            width: 100%; 
+                            text-align: left;
+                            margin-top: 10px;
+                        }
+        
+                        input {
+                            margin-top: 20px;
+                            width: 100%;
+                        }
+                }
+                
+        }
+
+        .restaurant-type {
+            @include centering;
+            width: 20%;
+            height: 100%;
+                
+                select {
+                    @include selectstyle;
+                    width: 80%;
+                }
+
+                svg {
+                    width: 20%;
+                }
+        }
+        
+        .restaurant-location {
+            @include centering;
+            width: 20%;
+            height: 100%;
+            justify-content: space-between;
+                           
+                select {
+                    @include selectstyle;
+                    width: 80%;
+                }
+
+                svg {
+                    width: 20%;
+                }
+        }
+
+        .filter-button {
+            @include centering;
+            justify-content: flex-end;
+            width: 20%;
+            height: 100%;
+
+                button {
+                    @include buttonstyle;
+                    width: 80%;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                }
+                
+        }
+}
+
+.browse-food {
+    background: #111;
+    padding: 50px 0px;
+}

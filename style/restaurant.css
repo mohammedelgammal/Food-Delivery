@@ -1379,4 +1379,240 @@ footer p {
   color: white;
   font-weight: 100;
 }
-/*# sourceMappingURL=main.css.map */
+
+main {
+  height: 40vw;
+}
+
+main .mid-ri-img {
+  top: 5%;
+  left: 85%;
+}
+
+main .mid-ri-img img {
+  width: 300px;
+  height: 300px;
+}
+
+main .up-le-img {
+  top: 40%;
+  left: -7%;
+}
+
+main .up-le-img img {
+  width: 250px;
+  height: 250px;
+}
+
+main .main-text {
+  height: 50px;
+}
+
+main .main-text h1 {
+  background: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to left, #f03c3c, #ff5a5a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 200px;
+}
+
+main .navigator a, main .navigator span {
+  color: gray;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  height: 200px;
+  width: 100vw;
+  background: #111;
+}
+
+.filters div {
+  margin: 0px 13px;
+}
+
+.filters select, .filters input {
+  cursor: pointer;
+}
+
+.filters .price-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  height: 100%;
+}
+
+.filters .price-slider .label-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.filters .price-slider .label-text label {
+  color: white;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.filters .price-slider .label-text input {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.filters .restaurant-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 20%;
+  height: 100%;
+}
+
+.filters .restaurant-type select {
+  width: 80%;
+  background-color: #111;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  width: 80%;
+}
+
+.filters .restaurant-type svg {
+  width: 20%;
+}
+
+.filters .restaurant-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 20%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filters .restaurant-location select {
+  width: 80%;
+  background-color: #111;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  width: 80%;
+}
+
+.filters .restaurant-location svg {
+  width: 20%;
+}
+
+.filters .filter-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 20%;
+  height: 100%;
+}
+
+.filters .filter-button button {
+  font-size: 20px;
+  color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background-image: linear-gradient(to left, #f03c3c, #ff5a5a);
+  border: none;
+  outline: none;
+  font-weight: semi-bold;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
+  width: 80%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.browse-food {
+  background: #111;
+  padding: 50px 0px;
+}
+/*# sourceMappingURL=restaurant.css.map */
