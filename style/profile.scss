@@ -1,0 +1,88 @@
+@import '../style/restaurant.scss';
+
+.user-profile {
+    @include centering;
+    width: 100vw;
+    height: 80vh;
+    background-color: #111;
+
+        .inner-profile {
+            @include centering;
+            width: 90%;
+            height: 80%;
+            border: 4px #333 solid;
+            padding: 20px;
+
+                .info {
+                    @include centering;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 100%;
+                    flex: 1;
+
+                        .avatar {
+                            @include centering;
+                            flex-direction: column;
+                            width: 100%;
+                            flex: 6;
+                            background-color: #333;
+
+                                img {
+                                    border-radius: 50%;
+                                }
+
+                                .profile-name {
+                                    width: 100%;
+                                    font-family: sans-serif;
+                                    font-weight: 100;
+                                    font-size: 2rem;
+                                    color: darkred;
+                                    line-height: 2.8rem;
+                                    text-align: center;
+                                }
+
+                                .profile-num {
+                                    font-weight: 100;
+                                    font-size: 0.9rem;
+                                    width: 100%;
+                                    color: white;
+                                    text-align: center;
+                                }
+                        }
+
+                        .section {
+                            @include centering;
+                            width: 100%;
+                            background-color: #111;
+                            flex: 2;
+                            color: white;
+                            border-bottom: 1px solid #333;
+                            cursor: pointer;
+                        }
+
+                        .section:hover {
+                            background-color: #333;
+                        }
+
+                        .account-section {
+                            margin-top: 5px;
+                        }
+
+                        .logout-section {
+                            border: none;
+                        }
+                }
+        
+                .details {
+                    @include centering;
+                    flex: 2;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 100%;
+                    padding-left: 30px;
+                    font-size: 1.1rem;
+                    color: gray;
+                    line-height: 2rem;
+                }
+            }        
+}
