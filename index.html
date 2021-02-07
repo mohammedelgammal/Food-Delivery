@@ -18,20 +18,20 @@
             <div class="red-circle circle"></div>
         </div>
     </div>
-    <div class="scroll-top">
+    <div class="scroll-top fadeout">
         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" color="#fff">
             <path stroke="#fff" stroke-width="1" fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path>
         </svg>
     </div>
     <header>
         <div class="logo">
-            <img src="imgs/logo.png" alt="logo">
+            <a href="index.html"><img src="imgs/logo.png" alt="logo"></a>
         </div>
         <nav>
             <ul>
-                <li>Browse Food</li>
-                <li>Download App</li>
-                <li>About Us</li>
+                <li><a href="#browse-food">Browse Food</a></li>
+                <li><a href="#download-app">Download App</a></li>
+                <li><a href="#about-us">About Us</a></li>
             </ul>   
         </nav>
         <div class="checkout">
@@ -53,7 +53,7 @@
                                 <div class="count-remove">
                                     <div class="count">
                                         <button class="increase">+</button>
-                                        <div class="countnumber">0</div>
+                                        <div class="countnumber"></div>
                                         <button class="decrease">-</button>
                                     </div>
                                     <div class="trash">
@@ -123,21 +123,33 @@
                 </svg>
                 <div class="user-login-submenu">
                     <div class="login-item item">
+                        <div class="link-cover">
+                            <a href="login.html"></a>
+                        </div>
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#fff"><path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"></path>
                         </svg>
-                        <a href="#">Login</a>
+                        <a href="login.html">Login</a>
                     </div>
                     <div class="register-item item">
+                        <div class="link-cover">
+                            <a href="signup.html"></a>
+                        </div>
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#fff"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zm0 2a6 6 0 016 6H2a6 6 0 016-6zm8-4a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
                         </svg>
-                        <a href="#">Register</a>
+                        <a href="signup.html">Register</a>
                     </div>
                     <div class="account-item item">
+                        <div class="link-cover">
+                            <a href="profile.html"></a>
+                        </div>
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" color="#fff"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2a7.2 7.2 0 01-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 01-6 3.22z"></path>
                         </svg>
-                        <a href="#">Account</a>
+                        <a href="profile.html">Account</a>
                     </div>
                     <div class="logout-item item">
+                        <div class="link-cover">
+                            <a href="#"></a>
+                        </div>
                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" color="#fff"><path d="M0 0h24v24H0z" fill="none"></path><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"></path>
                         </svg>
                         <a href="#">Logout</a>
@@ -195,7 +207,7 @@
             </div>
         </div>
     </main>
-    <div class="browse-food">
+    <div class="browse-food" id="browse-food">
         <div class="basic-info">
             <div class="left-hand-text">
                 <p>Basic info about online food.</p>
@@ -460,7 +472,7 @@
             </svg>
         </div>
     </div>
-    <div class="download-app">
+    <div class="download-app" id="download-app">
         <div class="text-content">
             <p>Better experience on obile ordering.</p>
             <h2>download our latest app<br/> from mobile stores.</h2>
@@ -480,7 +492,7 @@
             </div>
         </div>
     </div>
-    <div class="about-us">
+    <div class="about-us" id="about-us">
         <div class="info-about-us">
             <div class="left-hand-content">
                 <p>Basic info about food delivery.</p>

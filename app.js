@@ -3,8 +3,13 @@ let tl = anime.timeline({
     easing: 'easeInOutBack',
     duration: 800,
   });
-  
-  tl
+let scrollTopButton = document.querySelector('.scroll-top');
+let increaseButton = document.querySelectorAll('.increase');
+let decreaseButton = document.querySelectorAll('.decrease');
+let countNumber = document.querySelectorAll('.countnumber');
+let removeButton = 
+
+tl
   .add({
     targets: '.red-circle',
     translateY: '50px',
@@ -70,3 +75,29 @@ let tl = anime.timeline({
     loaderContainer = document.querySelector('.loader-container');
     loaderContainer.classList.add('fadeout');
   });
+  
+window.onscroll = () => {
+  if (window.pageYOffset >= 1000){
+    scrollTopButton.classList.add('showup');
+  } else {
+    scrollTopButton.classList.remove('showup');
+  }
+};
+
+scrollTopButton.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});
+
+console.log(decreaseButton)
+
+for(let i = 0; i < countNumber.length; i++){
+  countNumber[i].innerText = '0';
+increaseButton[i].addEventListener('click', () => {
+  countNumber[i].innerText++;
+});
+decreaseButton[i].addEventListener('click', () => {
+  if(countNumber[i].innerText > 1){
+    countNumber[i].innerText--;
+  }
+});
+}
