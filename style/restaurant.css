@@ -35,7 +35,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
-  position: absolute;
+  position: fixed;
   background-color: #222;
   width: 100vw;
   height: 100vh;
@@ -666,6 +666,7 @@ header .checkout .user-login .user-login-submenu {
 }
 
 header .checkout .user-login .user-login-submenu .item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,6 +680,20 @@ header .checkout .user-login .user-login-submenu .item {
   width: 100%;
   border-bottom: 0.1px rgba(255, 255, 255, 0.1) solid;
   padding-left: 20px;
+}
+
+header .checkout .user-login .user-login-submenu .item .link-cover {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+}
+
+header .checkout .user-login .user-login-submenu .item .link-cover a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 header .checkout .user-login .user-login-submenu .item svg {
@@ -707,7 +722,7 @@ header .checkout .user-login .user-login-submenu .item:hover {
   background-image: linear-gradient(to left, #f03c3c, #ff5a5a);
 }
 
-header .checkout .user-login .user-login-submenu .item:hover a {
+header .checkout .user-login .user-login-submenu .item:hover > a {
   -webkit-transform: translateX(15px);
           transform: translateX(15px);
 }
@@ -757,24 +772,41 @@ main .images, main .social-icons {
   position: absolute;
 }
 
+main .leaves {
+  position: absolute;
+  right: 13%;
+  top: 15%;
+}
+
 main .mid-ri-img {
   position: absolute;
-  left: 75%;
+  top: 16%;
+  left: 74%;
+}
+
+main .mid-ri-img img {
+  width: 550px;
+  height: 500px;
 }
 
 main .up-le-img {
-  top: 5%;
-  left: -2%;
+  top: 17%;
+  left: -1%;
+}
+
+main .up-le-img img {
+  width: 260px;
+  height: 260px;
 }
 
 main .lo-le-img {
-  top: 50%;
-  left: 0;
+  bottom: 2%;
+  left: 0px;
 }
 
 main .lo-le-img img {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
 }
 
 main .social-icons {
@@ -792,17 +824,15 @@ main .social-icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   top: 25%;
   left: 4%;
   height: 35%;
 }
 
 main .social-icons svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
+  margin: 10px 0px;
   cursor: pointer;
 }
 
@@ -835,14 +865,16 @@ main .main-text h1, main .main-text p {
 }
 
 main .main-text h1 {
-  font-size: 5rem;
+  font-size: 4.8rem;
   color: white;
   font-family: 'Grand Hotel Regular', cursive;
   font-weight: 100;
+  line-height: 5.4rem;
 }
 
 main .main-text .p-two {
   font-size: 14px;
+  line-height: 2rem;
 }
 
 main .search {
@@ -864,14 +896,14 @@ main .search {
 
 main .search input {
   width: 100%;
-  height: 100%;
+  height: 90%;
   border: none;
   outline: none;
   padding-left: 7%;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #292929;
   color: gray;
 }
 
@@ -896,9 +928,9 @@ main .search button {
   transition: background-image 0.5s ease;
   font-size: 20px;
   color: white;
-  width: 25%;
-  height: 80%;
-  left: 74%;
+  width: 35%;
+  height: 70%;
+  right: 10px;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: bold;
@@ -1019,6 +1051,14 @@ main .search .location-pin {
   color: gray;
 }
 
+.browse-food .basic-info .info-about-us .info .icon {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  background: #6B6BF1;
+}
+
 .browse-food .basic-info .info-about-us .info svg {
   width: 50px;
   height: 50px;
@@ -1031,6 +1071,11 @@ main .search .location-pin {
 
 .browse-food .basic-info .info-about-us .info .text {
   font-size: 1rem;
+}
+
+.browse-food .basic-info .info-about-us:hover .icon {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .browse-food .food-options {

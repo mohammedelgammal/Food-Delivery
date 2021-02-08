@@ -7,7 +7,14 @@ let scrollTopButton = document.querySelector('.scroll-top');
 let increaseButton = document.querySelectorAll('.increase');
 let decreaseButton = document.querySelectorAll('.decrease');
 let countNumber = document.querySelectorAll('.countnumber');
-let removeButton = 
+let upLeImg = document.querySelector('.up-le-img img');
+let clients = document.querySelectorAll('.client');
+let nameCity = document.querySelectorAll('.client-name-city');
+let paragraphs = document.querySelectorAll('.paragraphs p');
+let dots = document.querySelectorAll('.slider-dots svg');
+let counter = 1;
+let loveIdeas = document.querySelectorAll('.love, .new-ideas');
+let delivery = document.querySelector('.delivery svg');
 
 tl
   .add({
@@ -69,7 +76,17 @@ tl
     targets: '.border-circle-three',
     translateY: '0px',
     translateX: '0px',
-  }, 2200)
+  }, 2200);
+
+anime({
+  targets: '.up-le-img img',
+  rotateZ: '-35deg',
+  translateX: '-5px',
+  direction: 'alternate',
+  duration: 4000,
+  easing: 'linear',
+  loop: true
+}) 
   
   window.addEventListener('load', () => {
     loaderContainer = document.querySelector('.loader-container');
@@ -88,8 +105,6 @@ scrollTopButton.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
 
-console.log(decreaseButton)
-
 for(let i = 0; i < countNumber.length; i++){
   countNumber[i].innerText = '0';
 increaseButton[i].addEventListener('click', () => {
@@ -101,3 +116,14 @@ decreaseButton[i].addEventListener('click', () => {
   }
 });
 }
+
+loveIdeas.forEach(loveIdea => {
+  loveIdea.addEventListener('mouseenter', () => {
+    delivery.style.animation = "none";
+    delivery.style.fill = "white";
+  });
+  loveIdea.addEventListener('mouseleave', () => {
+    delivery.style.animation = 'scaler 0.4s ease infinite alternate';
+    delivery.style.fill = "url('#redgradient')";
+  });
+});

@@ -35,7 +35,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
-  position: absolute;
+  position: fixed;
   background-color: #222;
   width: 100vw;
   height: 100vh;
@@ -762,6 +762,7 @@ main {
   position: relative;
   height: 87vh;
   width: 100vw;
+  background-color: #1d1d1d;
 }
 
 main img, main h1, main p {
@@ -772,24 +773,41 @@ main .images, main .social-icons {
   position: absolute;
 }
 
+main .leaves {
+  position: absolute;
+  right: 13%;
+  top: 15%;
+}
+
 main .mid-ri-img {
   position: absolute;
-  left: 75%;
+  top: 16%;
+  left: 74%;
+}
+
+main .mid-ri-img img {
+  width: 550px;
+  height: 500px;
 }
 
 main .up-le-img {
-  top: 5%;
-  left: -2%;
+  top: 17%;
+  left: -1%;
+}
+
+main .up-le-img img {
+  width: 260px;
+  height: 260px;
 }
 
 main .lo-le-img {
-  top: 50%;
-  left: 0;
+  bottom: 2%;
+  left: 0px;
 }
 
 main .lo-le-img img {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
 }
 
 main .social-icons {
@@ -807,17 +825,15 @@ main .social-icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   top: 25%;
   left: 4%;
   height: 35%;
 }
 
 main .social-icons svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
+  margin: 10px 0px;
   cursor: pointer;
 }
 
@@ -850,14 +866,16 @@ main .main-text h1, main .main-text p {
 }
 
 main .main-text h1 {
-  font-size: 5rem;
+  font-size: 4.8rem;
   color: white;
   font-family: 'Grand Hotel Regular', cursive;
   font-weight: 100;
+  line-height: 5.4rem;
 }
 
 main .main-text .p-two {
   font-size: 14px;
+  line-height: 2rem;
 }
 
 main .search {
@@ -879,14 +897,14 @@ main .search {
 
 main .search input {
   width: 100%;
-  height: 100%;
+  height: 90%;
   border: none;
   outline: none;
   padding-left: 7%;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #292929;
   color: gray;
 }
 
@@ -911,9 +929,9 @@ main .search button {
   transition: background-image 0.5s ease;
   font-size: 20px;
   color: white;
-  width: 25%;
-  height: 80%;
-  left: 74%;
+  width: 35%;
+  height: 70%;
+  right: 10px;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: bold;
@@ -942,7 +960,7 @@ main .search .location-pin {
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: 172vh;
-  background-color: #111;
+  background-color: #181818;
 }
 
 .browse-food .basic-info {
@@ -984,7 +1002,7 @@ main .search .location-pin {
 }
 
 .browse-food .basic-info .left-hand-text p {
-  color: darkred;
+  color: #CE2029;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
@@ -1032,12 +1050,20 @@ main .search .location-pin {
       -ms-flex: 1;
           flex: 1;
   color: gray;
+  cursor: pointer;
+}
+
+.browse-food .basic-info .info-about-us .info .icon {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .browse-food .basic-info .info-about-us .info svg {
   width: 50px;
   height: 50px;
-  fill: darkred;
+  fill: #CE2029;
 }
 
 .browse-food .basic-info .info-about-us .info .number {
@@ -1046,6 +1072,11 @@ main .search .location-pin {
 
 .browse-food .basic-info .info-about-us .info .text {
   font-size: 1rem;
+}
+
+.browse-food .basic-info .info-about-us .info:hover .icon {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .browse-food .food-options {
@@ -1066,6 +1097,20 @@ main .search .location-pin {
 
 .browse-food .food-options .option {
   position: relative;
+  cursor: pointer;
+  background-color: #111;
+  padding-bottom: 30px;
+}
+
+.browse-food .food-options .option .img-container {
+  overflow: hidden;
+}
+
+.browse-food .food-options .option .img-container img {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .browse-food .food-options .option .time-tag {
@@ -1080,6 +1125,7 @@ main .search .location-pin {
   color: white;
   padding: 10px;
   font-weight: 200;
+  z-index: 2;
 }
 
 .browse-food .food-options .option .upper-content {
@@ -1112,7 +1158,16 @@ main .search .location-pin {
 
 .browse-food .food-options .option p {
   padding: 0px 20px;
-  color: white;
+  color: gray;
+}
+
+.browse-food .food-options .option:hover > .img-container > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.browse-food .food-options .option:hover .title {
+  color: #CE2029;
 }
 
 .browse-food .browse-more {
@@ -1147,6 +1202,13 @@ main .search .location-pin {
   transition: background-image 0.5s ease;
   width: 500px;
   font-weight: 500;
+  background: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to left, #f03c3c, #ff5a5a);
+}
+
+.browse-food .browse-more button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to right, #f03c3c, #ff5a5a);
 }
 
 .reviews {
@@ -1192,14 +1254,18 @@ main .search .location-pin {
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
-  width: 100vw;
-  height: 200px;
+  width: 44vw;
+  height: 300px;
   z-index: 1;
+  overflow-x: hidden;
+  background-color: #746B61;
 }
 
 .reviews .slider .client {
   text-align: center;
   margin: 20px;
+  -webkit-transform: translateX(90px);
+          transform: translateX(90px);
 }
 
 .reviews .slider .client img {
@@ -1208,12 +1274,16 @@ main .search .location-pin {
 }
 
 .reviews .slider .client .client-name {
-  color: darkred;
+  color: #CE2029;
   font-size: 1.5rem;
 }
 
 .reviews .slider .client .client-city {
   font-weight: 100;
+}
+
+.reviews .slider .client-name-city {
+  opacity: 0;
 }
 
 .reviews .paragraphs {
@@ -1239,6 +1309,8 @@ main .search .location-pin {
   color: gray;
   font-size: 1rem;
   font-weight: 100;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .reviews .slider-dots {
@@ -1254,6 +1326,10 @@ main .search .location-pin {
   height: 120px;
   height: 50px;
   z-index: 1;
+}
+
+.reviews .slider-dots svg {
+  fill: white;
 }
 
 .download-app {
@@ -1297,7 +1373,7 @@ main .search .location-pin {
 }
 
 .download-app .text-content p {
-  color: darkred;
+  color: #CE2029;
   font-size: 1.3rem;
   margin-bottom: 4rem;
 }
@@ -1344,6 +1420,7 @@ main .search .location-pin {
 .about-us {
   height: 100vh;
   width: 100vw;
+  background-color: #1d1d1d;
 }
 
 .about-us .info-about-us {
@@ -1385,7 +1462,7 @@ main .search .location-pin {
 }
 
 .about-us .info-about-us .left-hand-content p {
-  color: darkred;
+  color: #CE2029;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
@@ -1458,12 +1535,19 @@ main .search .location-pin {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .about-us .our-values .value .icon svg {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
+  cursor: pointer;
+  fill: white;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .about-us .our-values .value p {
@@ -1473,7 +1557,54 @@ main .search .location-pin {
   text-align: center;
 }
 
+.about-us .our-values .value:hover svg {
+  fill: url("#redgradient");
+  -webkit-animation: scaler 0.4s ease infinite alternate;
+          animation: scaler 0.4s ease infinite alternate;
+}
+
+.about-us .our-values .delivery svg {
+  -webkit-animation: scaler 0.4s ease infinite alternate;
+          animation: scaler 0.4s ease infinite alternate;
+}
+
+.about-us .our-values .love:hover ~ .delivery {
+  background-color: red;
+}
+
+@-webkit-keyframes scaler {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes scaler {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
 footer {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100vw;
+  height: 200px;
+  background-color: #111;
+  z-index: -3;
+  bottom: 0;
+}
+
+footer .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1488,12 +1619,12 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100vw;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   background-color: #111;
 }
 
-footer .social-icons {
+footer .footer-container .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1510,7 +1641,12 @@ footer .social-icons {
   width: 20%;
 }
 
-footer p {
+footer .footer-container .social-icons:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#f03c3c), to(#ff5a5a));
+  background: linear-gradient(to left, #f03c3c, #ff5a5a);
+}
+
+footer .footer-container p {
   font-size: 15px;
   color: white;
   font-weight: 100;
